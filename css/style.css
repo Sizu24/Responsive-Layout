@@ -1,0 +1,40 @@
+* box-sizing {
+  border-box;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  list-style-type: none;
+}
+
+nav li a {
+  list-style: none;
+  text-transform: uppercase;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+main {
+  diplay: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+main img {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+}
+
+footer li {
+  list-style-type: none;
+}
