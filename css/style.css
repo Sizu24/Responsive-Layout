@@ -121,23 +121,33 @@ header .profile-pic {
   border-top: 1px solid #dbdbdb80;
   margin-bottom: 50px;
 }
-
+.contact-section {
+  padding-top: 35px;
+  margin-bottom: 65px;
+}
 .footer-nav li {
   display: inline-block;
   background: #fafafa;
 }
 
-.footer-nav li:first-child{
+/* .footer-nav li:first-child{
   float: left;
   font-weight: 900;
-}
+} */
 
-.footer-nav li:last-child{
+.footer-nav li:nth-child(4){
   float: right;
+  padding-bottom: 20px;
+  line-height: 0em;
 }
 
-.footer-nav li:nth-child(n+2):nth-child(-n+4) {
+.footer-nav li:nth-child(n+1):nth-child(-n+3) {
   display: none;
+}
+.student {
+  float: left;
+  font-size: 0.9em;
+  font-weight: 900;
 }
 
 .footer-message {
@@ -164,6 +174,10 @@ header .profile-pic {
 
 @media screen and (min-width: 768px) {
 
+
+  article p {
+    padding: 0 35px 35px 20px;
+  }
   .nav {
     flex-direction: row;
     justify-content: center;
@@ -209,13 +223,22 @@ header .profile-pic {
     margin: 50px 0;
   }
 
-  .footer-nav li:nth-child(n+2):nth-child(-n+4) {
-    display: inline-block;
-    text-align: right;
+  .footer-nav ul{
+    float: right;
   }
-
+  .footer-nav li:nth-child(n+1):nth-child(-n+3) {
+    display: inline-block;
+    font-weight: 600;
+    padding-left: 20px;
+    line-height: 0em;
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
   .footer-nav li:last-child{
     display: none;
+  }
+  .contact-section {
+    padding-top: 10px;
   }
 
 }
