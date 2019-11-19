@@ -6,7 +6,6 @@
 
 body {
   font-family: "Alta", sans-serif;
-  /* background: #fafafa; */
   background: #fafafa;
 }
 
@@ -96,7 +95,8 @@ footer p {
   font-weight: 700;
   font-size: 1.5rem;
   background:#fafafa;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 header .profile-pic {
@@ -108,6 +108,7 @@ header .profile-pic {
   padding: 35px 0;
   font-size: 0.9rem;
   text-transform: uppercase;
+  flex-basis: 100%;
 }
 
 .introduction {
@@ -157,4 +158,64 @@ header .profile-pic {
   text-transform: uppercase;
   font-size: 0.9rem;
   font-weight: 800;
+}
+
+/* Bigger screen styles */
+
+@media screen and (min-width: 768px) {
+
+  .nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .nav li {
+    padding: 20px;
+    background: #fafafa;
+  }
+  header {
+    flex-direction: row-reverse;
+  }
+  .profile-pic {
+    max-width: 42%;
+    padding-right: 10px;
+    padding-bottom: 60px;
+  }
+  .introduction{
+    flex-basis: 40%;
+    padding-top: 20px;
+    text-align: left;
+    font-size: 1.3em;
+
+  }
+  header p {
+    flex-grow: 1;
+  }
+
+  article {
+    flex-basis: 48%;
+    margin: 0 0.4em;
+  }
+
+  .footer-message {
+    font-size: 1.3em;
+    padding: 0 85px 25px 85px;
+  }
+
+  footer ul {
+    margin-bottom: 60px;
+  }
+
+  #contact {
+    margin: 50px 0;
+  }
+
+  .footer-nav li:nth-child(n+2):nth-child(-n+4) {
+    display: inline-block;
+    text-align: right;
+  }
+
+  .footer-nav li:last-child{
+    display: none;
+  }
+
 }
