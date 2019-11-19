@@ -7,6 +7,7 @@
 body {
   font-family: "Alta", sans-serif;
   background: #fafafa;
+  margin-top: 25px;
 }
 
 .nav {
@@ -126,6 +127,7 @@ header .profile-pic {
   margin-bottom: 65px;
 }
 .footer-nav li {
+  /* Makes footer links inline */
   display: inline-block;
   background: #fafafa;
 }
@@ -136,12 +138,14 @@ header .profile-pic {
 } */
 
 .footer-nav li:nth-child(4){
+  /* Back to top link in footer*/
   float: right;
   padding-bottom: 20px;
   line-height: 0em;
 }
 
 .footer-nav li:nth-child(n+1):nth-child(-n+3) {
+  /* Hides links in footer, except for Back to top link */
   display: none;
 }
 .student {
@@ -174,10 +178,6 @@ header .profile-pic {
 
 @media screen and (min-width: 768px) {
 
-
-  article p {
-    padding: 0 35px 35px 20px;
-  }
   .nav {
     flex-direction: row;
     justify-content: center;
@@ -196,7 +196,7 @@ header .profile-pic {
   }
   .introduction{
     flex-basis: 40%;
-    padding-top: 20px;
+    padding-top: 10px;
     text-align: left;
     font-size: 1.3em;
 
@@ -204,12 +204,13 @@ header .profile-pic {
   header p {
     flex-grow: 1;
   }
-
   article {
     flex-basis: 48%;
     margin: 0 0.4em;
   }
-
+  article p {
+    padding: 0 35px 35px 20px;
+  }
   .footer-message {
     font-size: 1.3em;
     padding: 0 85px 25px 85px;
@@ -227,18 +228,45 @@ header .profile-pic {
     float: right;
   }
   .footer-nav li:nth-child(n+1):nth-child(-n+3) {
+    /* Displays links in footer, spaces links, aligns line height with "Student" */
     display: inline-block;
     font-weight: 600;
     padding-left: 20px;
     line-height: 0em;
     font-size: 0.8em;
     text-transform: uppercase;
+ 
   }
   .footer-nav li:last-child{
     display: none;
+    /* Hides Back to top link in footer */
   }
   .contact-section {
     padding-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px){
+
+  .name {
+    float: left;
+    margin-left: 3%;
+  }
+  .nav {
+    justify-content: flex-end;
+  }
+
+  .main-header {
+    clear: left;
+  }
+  .introduction {
+    margin-right: 4%;
+    margin-left: 3%;
+   
+  }
+
+  article {
+    flex-basis: 30%;
   }
 
 }
