@@ -44,14 +44,6 @@ header {
   line-height: 1.5;
 }
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  background: #ffffff;
-}
-
 main article:last-child {
   padding-bottom: 25px;
 }
@@ -110,12 +102,17 @@ header .profile-pic {
   font-size: 0.9rem;
   text-transform: uppercase;
   flex-basis: 100%;
+  text-align: center;
 }
 
 .introduction {
   padding-bottom: 25px;
   padding-top: 10px;
   color: #969696;
+}
+
+.gradient-image {
+  background-image: linear-gradient(rgba: 0,0,0,0.5), url(images/code.png);
 }
 
 .footer-nav {
@@ -137,14 +134,14 @@ header .profile-pic {
   font-weight: 900;
 } */
 
-.footer-nav li:nth-child(4){
+.footer-nav li:nth-child(5){
   /* Back to top link in footer*/
   float: right;
   padding-bottom: 20px;
   line-height: 0em;
 }
 
-.footer-nav li:nth-child(n+1):nth-child(-n+3) {
+.footer-nav li:nth-child(n+1):nth-child(-n+4) {
   /* Hides links in footer, except for Back to top link */
   display: none;
 }
@@ -164,9 +161,53 @@ header .profile-pic {
 }
 
 /* Id styles */
+#portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  background: #ffffff;
+}
+
 #portfolio img {
   width: 100%;
 }
+
+#blog {
+  text-align: center;
+  background: #ffffff;
+}
+
+figure {
+  background: black;
+  width: 100%;
+  margin: 0;
+}
+ #blog img{
+   width: 100%;
+   position: relative;
+   opacity: 0.5;
+
+ }
+
+ .blog-info {
+   color: rgb(68, 64, 64);
+   
+ }
+ #blog h2 {
+  position: absolute;
+  color: #fff;
+  opacity: 1.0;
+  z-index: 1;
+  margin-left: 30px;
+  font-weight: 900;
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+ }
+
+ #blog img:hover {
+  opacity: 1.0;
+ }
 
 #contact {
   text-transform: uppercase;
@@ -197,6 +238,7 @@ header .profile-pic {
   .introduction{
     flex-basis: 40%;
     padding-top: 10px;
+    padding-left: 1%;
     text-align: left;
     font-size: 1.3em;
 
@@ -227,7 +269,7 @@ header .profile-pic {
   .footer-nav ul{
     float: right;
   }
-  .footer-nav li:nth-child(n+1):nth-child(-n+3) {
+  .footer-nav li:nth-child(n+1):nth-child(-n+4) {
     /* Displays links in footer, spaces links, aligns line height with "Student" */
     display: inline-block;
     font-weight: 600;
@@ -264,7 +306,10 @@ header .profile-pic {
     margin-left: 3%;
    
   }
-
+  .profile-pic {
+    flex-basis: 30%;
+    margin-right: 2%;
+  }
   article {
     flex-basis: 30%;
   }
