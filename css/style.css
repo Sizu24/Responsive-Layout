@@ -10,6 +10,9 @@ body {
   margin-top: 25px;
 }
 
+a {
+  text-decoration: none;
+}
 .nav {
   display: flex;
   flex-direction: column;
